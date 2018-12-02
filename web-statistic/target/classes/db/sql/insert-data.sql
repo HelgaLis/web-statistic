@@ -1,0 +1,1 @@
+insert into statistic(page_id, user_id,visit_date) values('','',''); 

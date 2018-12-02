@@ -1,0 +1,15 @@
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/service/StatisticServiceImpl.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/dao/JdbcTemplateStatisticDaoImpl.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/interceptor/StatisticInterceptor.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/controller/StatisticController.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/service/StatisticReportTemplate.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/domain/Greeting.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/domain/StatisticPeriod.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/configuration/DispatcherServletInitializer.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/service/StatisticService.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/configuration/RootApplicationContextConfig.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/dao/StatisticDao.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/domain/Statistic.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/dao/InMemoryStatisticDao.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/configuration/WebApplicationContextConfig.java
+/home/helga/eclipse-workspace/web-statistic/src/main/java/statistic/controller/GreetingController.java
