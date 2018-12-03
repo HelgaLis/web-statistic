@@ -1,15 +1,16 @@
 package statistic.service;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import statistic.dao.StatisticDao;
 import statistic.domain.Statistic;
 import statistic.domain.StatisticPeriod;
 @Transactional
+@Service
 public class StatisticServiceImpl implements StatisticService {
 
 	private final StatisticDao dao;

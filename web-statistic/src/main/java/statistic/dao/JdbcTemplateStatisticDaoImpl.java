@@ -1,13 +1,14 @@
 package statistic.dao;
-
+import java.sql.ResultSet;
 import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import statistic.domain.Statistic;
 import statistic.domain.StatisticPeriod;
-
+@Repository
 public class JdbcTemplateStatisticDaoImpl implements StatisticDao {
 	private final JdbcTemplate jdbcTemplate;
 	@Autowired
@@ -37,24 +38,23 @@ public class JdbcTemplateStatisticDaoImpl implements StatisticDao {
 
 	@Override
 	public long getPeriodVisitorsAmount(StatisticPeriod period) {
-		String sql=String.format("select count(user_id) from statistic where visit_date between'%s' AND '%s'", 
+		String sql=String.format("select count(user_id) from statistic where visit_date between '%s' AND '%s'", 
 				period.getStartDate(),period.getEndDate());
 		return jdbcTemplate.queryForObject(sql, Long.class);
 	}
 
 	@Override
 	public long getPeriodUniqVisitorsAmount(StatisticPeriod period) {
-		String sql=String.format("select count(user_id) from statistic where visit_datebetween'%s' AND '%s'",
+		String sql=String.format("select count(distinct user_id) from statistic where visit_date between'%s' AND '%s'",
 				period.getStartDate(),period.getEndDate());
 		return jdbcTemplate.queryForObject(sql, Long.class);
 	}
 
 	@Override
 	public long getPeriodRegularVisitorsAmount(StatisticPeriod period) {
-		String sql=String.format("SELECT count(distinct user_id), COUNT(page_id) from tempo "
-				+ "where visit_datebetween'%s' AND '%s' having count(page_id)>=10",period.getStartDate(),period.getEndDate());
-		return jdbcTemplate.queryForObject(sql, Long.class);
+		String sql=String.format("select user_id from statistic "
+				+ "where visit_date between '%s' AND '%s' group by user_id  having count(distinct page_id)>=10 ",period.getStartDate(),period.getEndDate());
+		return jdbcTemplate.queryForList(sql).size();
 	}
-
 	
 }
