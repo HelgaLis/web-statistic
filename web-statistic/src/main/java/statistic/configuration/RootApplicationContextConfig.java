@@ -20,7 +20,7 @@ import statistic.service.StatisticService;
 import statistic.service.StatisticServiceImpl;
 
 @Controller
-//@ComponentScan("statistic")
+@ComponentScan("statistic")
 
 
 public class RootApplicationContextConfig {

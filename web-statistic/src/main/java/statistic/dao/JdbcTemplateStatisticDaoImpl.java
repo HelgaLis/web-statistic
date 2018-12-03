@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import statistic.domain.Statistic;
 import statistic.domain.StatisticPeriod;
-@Repository
+//@Repository
 public class JdbcTemplateStatisticDaoImpl implements StatisticDao {
 	private final JdbcTemplate jdbcTemplate;
 	@Autowired

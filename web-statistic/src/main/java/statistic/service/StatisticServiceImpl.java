@@ -10,7 +10,7 @@ import statistic.dao.StatisticDao;
 import statistic.domain.Statistic;
 import statistic.domain.StatisticPeriod;
 @Transactional
-@Service
+//@Service
 public class StatisticServiceImpl implements StatisticService {
 
 	private final StatisticDao dao;

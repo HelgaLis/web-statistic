@@ -1,11 +1,9 @@
 package statistic.dao;
 
 import java.time.LocalDate;
-import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import statistic.domain.Statistic;
@@ -17,9 +15,6 @@ public class InMemoryStatisticDao implements StatisticDao {
 	@Override
 	public void createStatisticEntry(Statistic statistic) {
 		statisticList.add(statistic);
-	}
-	public void removeAll() {
-		statisticList.clear();
 	}
 	@Override
 	public long getGurrentDayVisitorsAmount() {
